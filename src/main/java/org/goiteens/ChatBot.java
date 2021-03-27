@@ -1,8 +1,6 @@
 package org.goiteens;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class ChatBot {
     private static Map<String, Integer> professions;
@@ -37,8 +35,10 @@ public class ChatBot {
     public static String process(String message) {
         if (isHelloMessage(message)) {
             String botName = "ChatBot";
-            return "Приветствую, я - " + botName;
+            return "Приветствую, я - " + botName + "\uD83E\uDD16";
+
         }
+
 
         int professionSalary = find(message, professions);
         int dreamCost = find(message, dreams);
@@ -89,7 +89,20 @@ public class ChatBot {
 
         String helloWord1 = "привет";
         String helloWord2 = "здравствуй";
+        String helloWord3 = "нет";
+        String helloWord4 = "тест";
+        String helloWord5 = "Bunesimo";
+        String helloWord6 = "Прив ботяра";
 
-        return message.contains(helloWord1) || message.contains(helloWord2);
+        List<String> list = new ArrayList<>();
+        list.add(helloWord1);
+        list.add(helloWord2);
+        list.add(helloWord3);
+        list.add(helloWord4);
+        list.add(helloWord5);
+        list.add(helloWord6);
+        list.add("HI");
+        return list.contains(message);
+        //return message.contains(helloWord1) || message.contains(helloWord2) || message.contains(helloWord3) || message.contains(helloWord4) || message.contains(helloWord5) || message.contains(helloWord6);
     }
 }
