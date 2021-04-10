@@ -7,8 +7,6 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class TelegramBot extends TelegramLongPollingBot {
     public TelegramBot() {
-        ChatBot.initDreams();
-        ChatBot.initProfessions();
     }
     
     @Override
